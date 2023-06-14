@@ -1,0 +1,44 @@
+#!/bin/bash
+
+
+set -e # stops script when error occurs
+set -x # writes out all output
+
+
+PWD=$(dirname $(readlink -f "${BASH_SOURCE[0]}"))
+PROGPATH="${PWD}/data_periods"
+#  -- upload to minio server -----------------------
+inpath="data_periods"
+#ln -fs ${PROGPATH}/upload.sh ${inpath}/
+
+INDICATORs=("pre_sum") ##("n_heatdays")
+EVAL_PERIODs=("year")
+VAR_TYPEs=("abs" "rel_change")
+RCPs=("rcp26" "rcp85")
+cd $inpath
+for indicator in "${INDICATORs[@]}"; do
+    for eval_period in "${EVAL_PERIODs[@]}"; do
+        for var_type in "${VAR_TYPEs[@]}"; do
+            for rcp in "${RCPs[@]}"; do
+                file="${indicator}_${eval_period}_${var_type}_${rcp}_ensmedian_germany"
+                outf=$file.nc # file to upload
+                if [ -f $outf ]; then
+                    echo "upload file!"
+                    outpath="wis-d/climproj/periods" # directory on MinIO
+                    hosts=("gdi.intranet.ufz.de:9000")  # "gdi-fs.ufz.de")
+                    protocols=("http") # "https")
+                    i=0
+                    for host in "${hosts[@]}"; do
+                        protocol=${protocols[$i]}
+                        echo "uploading to ${host} - ${protocol}"
+                        bash ${PROGPATH}/upload.sh ${outpath}/${indicator}/${eval_period}/${var_type}/${rcp}/$file ${outf} ${host} ${protocol}
+                        i=$(($i + 1))
+                    done
+                else
+                    echo "$outf not exists"
+                    echo "no file exists with this combination for $indicator $eval_period $var_type $rcp"
+                fi
+            done
+        done
+    done
+done

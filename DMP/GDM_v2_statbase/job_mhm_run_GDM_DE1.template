@@ -1,0 +1,106 @@
+{
+    "version":1,
+    "title":"[German Drought Monitor] daily historic mHM run 1947 - 2019 GDM_DE1 setup (GDM-v2-2021)",
+    "dataproject":546,
+    "archivefile":{
+        "source":"EVE",
+        "path":"/work/malla/GDM/GDM_v2_statbase/backup/mHM_run_GDM_DE1",
+        "filename":"mHM_run_GDM_DE1.tar.gz"
+    },
+    "visible_for_ufz_external_persons_in_drp":true,
+    "downloadpermissions":{
+        "all":true,
+        "mails":[
+            "friedrich.boeing@ufz.de","chaitanya.malla@ufz.de"
+        ]
+    },
+    "license":{
+        "creativecommons4.0":{
+            "modification":"restricted",
+            "commercial":false
+        }
+    },
+    "I CONFIRM THAT PROVIDING THE DATA TO THE SPECIFIED PEOPLE DOES NOT VIOLATE THEIR LICENCE AND TERMS OF USE":"malla",
+    "metadata":{
+        "dublincore":{
+            "subject":[
+                "mHM, GDM, daily, GDM-v2-2021, buek200"
+            ],
+            "description":"Daily mHM runs 1947 - 2019. The underlying input data is described in  https://doi.org/10.5194/hess-26-5137-2022. This run was used in as the statistical basis for the GDM version 2 (GDM-v2-2021 setup). A steady state spin up for the mHM run was done, yet first three years 1947 -1949 need to be discarded from analyses \r\n",
+            "coverage":"Germany",
+            "type":[
+                "DATASET"
+            ],
+            "dataquality":"ASSURED",
+            "status":[
+                "BEARBEITET"
+            ],
+            "format":[
+                "netcdf"
+            ],
+            "creator":[
+                [
+                    "username",
+                    "malla"
+                ]
+            ],
+            "publisher":[
+                [
+                    "text",
+                    "Helmholtz-Zentrum f\u00fcr Umweltforschung"
+                ]
+            ],
+            "rightsholder":[
+                [
+                    "text",
+                    "Helmholtz-Zentrum f\u00fcr Umweltforschung"
+                ]
+            ],
+            "contact":[
+                "Friedrich Boeing <friedrich.boeing@ufz.de>\r\nAndreas Marx <andreas.marx@ufz.de>"
+            ],
+            "date":{
+                "from":{
+                    "year":1951,
+                    "month":1,
+                    "day":1,
+                    "hour":23,
+                    "minute":0
+                },
+                "to":{
+                    "year":2020,
+                    "month":12,
+                    "day":31,
+                    "hour":23,
+                    "minute":0
+                }
+            },
+            "language":[
+                "en"
+            ]
+        },
+        "geocore":{
+            "coordinates":[
+                [
+                    47.25,
+                    5.75
+                ],
+                [
+                    55,
+                    5.75
+                ],
+                [
+                    55,
+                    15.25
+                ],
+                [
+                    47.25,
+                    15.25
+                ]
+            ],
+            "category":"climate",
+            "type":"grid",
+            "datatype":"float"
+        }
+    }
+}

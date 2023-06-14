@@ -1,0 +1,107 @@
+{
+    "version":1,
+    "title":"[German Drought Monitor] Maximum temperature EDK interpolation, 0.015625 deg spatial resolution",
+    "dataproject":546,
+    "archivefile":{
+        "source":"EVE",
+        "path":"@SOURCE_PATH@",
+        "filename":"@SOURCE_FILE@",
+        "md5_file":"@SOURCE_FILE@.md5"
+    },
+    "visible_for_ufz_external_persons_in_drp":false,
+    "downloadpermissions":{
+        "all":true,
+        "mails":[
+            "friedrich.boeing@ufz.de", "chaitanya.malla@ufz.de"
+        ]
+    },
+    "license":{
+        "creativecommons4.0":{
+            "modification":"restricted",
+            "commercial":false
+        }
+    },
+    "I CONFIRM THAT PROVIDING THE DATA TO THE SPECIFIED PEOPLE DOES NOT VIOLATE THEIR LICENCE AND TERMS OF USE":"boeing",
+    "metadata":{
+        "dublincore":{
+            "subject":[
+                "Maximum temperature interpolation for Germany, based on DWD Station data downloaded from https:\/\/opendata.dwd.de\/climate_environment\/CDC\/observations_germany\/climate\/daily\/more_precip\/historical\/, EDK program (https:\/\/doi.org\/10.5281\/zenodo.5842486)"
+            ],
+            "description":"GDM-v2-2021 setup (EPSG:4326, 0.015625 deg) \r\n",
+            "coverage":"Germany",
+            "type":[
+                "DATASET"
+            ],
+            "dataquality":"ASSURED",
+            "status":[
+                "BEARBEITET"
+            ],
+            "format":[
+                "netcdf"
+            ],
+            "creator":[
+                [
+                    "username",
+                    "malla"
+                ]
+            ],
+            "publisher":[
+                [
+                    "text",
+                    "Helmholtz-Zentrum f\u00fcr Umweltforschung"
+                ]
+            ],
+            "rightsholder":[
+                [
+                    "text",
+                    "Helmholtz-Zentrum f\u00fcr Umweltforschung"
+                ]
+            ],
+            "contact":[
+                "Friedrich Boeing <friedrich.boeing@ufz.de>\r\nAndreas Marx <andreas.marx@ufz.de>"
+            ],
+            "date":{
+                "from":{
+                    "year":1947,
+                    "month":1,
+                    "day":1,
+                    "hour":23,
+                    "minute":0
+                },
+                "to":{
+                    "year":2019,
+                    "month":12,
+                    "day":31,
+                    "hour":23,
+                    "minute":0
+                }
+            },
+            "language":[
+                "en"
+            ]
+        },
+        "geocore":{
+            "coordinates":[
+                [
+                    47.25,
+                    5.75
+                ],
+                [
+                    55,
+                    5.75
+                ],
+                [
+                    55,
+                    15.25
+                ],
+                [
+                    47.25,
+                    15.25
+                ]
+            ],
+            "category":"climate",
+            "type":"grid",
+            "datatype":"float"
+        }
+    }
+}
